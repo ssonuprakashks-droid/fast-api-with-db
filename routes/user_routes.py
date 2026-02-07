@@ -1,8 +1,8 @@
-from fastapi import APIRouter
+from fastapi import APIRouter,Depends
 from sqlalchemy.orm import Session
 from db import get_db
 from repositories.user_repo import userRepo
-from schemas.user_schema import userschema
+from schemas.user_schemas import user_schemas
 router=APIRouter()
 
 @router.post("/signup")
