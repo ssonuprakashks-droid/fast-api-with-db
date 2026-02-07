@@ -1,4 +1,4 @@
 from pydantic import BaseModel
 class user_schemas(BaseModel):
-    username:str
+    email:str
     password:str
