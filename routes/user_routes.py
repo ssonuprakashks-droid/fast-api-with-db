@@ -50,7 +50,7 @@ def refresh_token(token_data: TokenRefresh, db: Session = Depends(get_db)):
             headers={"WWW-Authenticate": "Bearer"}
         )
     
-    user_repo = UserRepo(db)
+    user_repo = userRepo(db)
     user = user_repo.get_user_by_email(payload.get("email"))
     
     if not user:
